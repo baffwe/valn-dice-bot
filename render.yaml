@@ -1,0 +1,15 @@
+services:
+- type: web
+  name: vk-callback-bot
+  env: python
+  buildCommand: "pip install -r requirements.txt"
+  startCommand: "python main.py"
+  envVars:
+    - key: VK_BOT_TOKEN
+      sync: false
+    - key: VK_CONFIRMATION_TOKEN
+      sync: false
+    - key: VK_SECRET_KEY
+      sync: false
+    - key: VK_GROUP_ID
+      sync: false
